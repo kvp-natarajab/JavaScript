@@ -1,0 +1,85 @@
+<html>
+<head>
+	<title>Form validation using by javascript</title>
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<script src="myscripts.js" type="text/javascript">
+	</script>
+</head>
+<body>
+<div class="container">
+<div class="leftDiv">
+
+	</div>
+	<div class="rightDiv">
+		<form class="frmUser" action="success.html" name="myForm" method="post" onSubmit="return validate_form();">
+	
+			<fieldset>
+		<legend>Name</legend><input type="text" class="common" placeholder="First Name" name="firstname"/>
+		<span class="error errormsg" id="error_firstname"></span>
+		<input type="text" class="common" placeholder="Last Name"  name="lastname"/>
+		<span class="error errormsg" id="error_lastname"></span>
+	</fieldset>
+	<fieldset>
+		<legend>Gender</legend><input type="radio" class="" value="Male"  name="gender"/><label>Male</label>
+		<input type="radio" class="" value="Female" name="gender"/><label>Female</label><br/>
+		<span class="error errormsg" id="error_gender"></span>
+	</fieldset>
+	<fieldset>
+		<input type="password" class="common" name="password" minlength="8" placeholder="New Password"/>
+		<span class="error errormsg" id="error_password"></span>
+		<input type="password" class="common" name="repassword" minlength="8" placeholder="Re-type Password"/>
+		<span class="error errormsg" id="error_repassword"></span>
+
+	</fieldset>
+	<fieldset>
+		<legend>Qualification</legend><input type="Checkbox" class=""/><label>B.E/B.Tech</label>
+		<input type="Checkbox" class=""/><label>M.Tech</label>
+		<input type="Checkbox" class=""/><label>M.B.B.S</label>
+		<input type="Checkbox" class=""/><label>Other</label>
+	</fieldset>
+	<fieldset>
+		<legend>Email Id</legend><input type="text" class="common" name="email"/>
+		<span class="error errormsg" id="error_email"></span>
+	</fieldset>
+	<fieldset>
+		<legend>Present Address</legend>
+			<textarea class="txtArea" id="presentAddr"></textarea>
+	</fieldset>
+	<fieldset>
+		<legend>Permanent Address</legend>
+			<textarea class="txtArea" name="permanetAddr"></textarea>
+			<span class="error errormsg" id="error_permanetAddr"></span>
+	</fieldset>
+	<fieldset>
+			<select class="common" id="slctLocation">
+				<option value="">Please select Location</option>
+				<option value="India">India</option>
+				<option value="America">America</option>
+				<option value="India">India</option>
+				<option value="America">America</option>
+				<option value="India">India</option>
+				<option value="America">America</option>
+			</select>
+			<span class="error errormsg" id="error_slctLocation"></span>
+	</fieldset>
+	<fieldset>
+		<legend>Mobile Phone</legend>
+			<input type="text" class="common" placeHolder="Mobile Phone Number" name="phone" minlength="10"/>
+			<span class="error errormsg" id="error_phone"></span>
+	</fieldset>
+	<fieldset>
+			<input type="checkbox" class="" id="chkCondition"/><label>Accept Terms and Condtions</label><br/>
+			<span class="error errormsg" id="error_condition"></span>
+	</fieldset>
+	<fieldset>
+	
+
+		<input type="submit" class="btn" value="Sign up"/>
+		
+	</fieldset>
+		</form>
+
+	</div>
+</div>
+</body>
+</html>

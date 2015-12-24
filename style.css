@@ -1,0 +1,60 @@
+body{
+	background: url(blue_line_background.jpg) no-repeat fixed center top/ 100% 100%;
+}
+.common{
+	width:270px;
+	height:40px;
+	font-size:16px;
+	padding-left:8px;
+
+}
+
+.common:focus{
+	border-color:#3399ff;
+}
+.common:invalid{
+	border-color:#ff0;
+}
+.leftDiv{
+	width:500px;
+	height: 700px;
+	float:left;
+}
+.errormsg{	
+	display:none;
+}
+.error{
+	color:#ff0000;
+	font-size:14px;
+}
+.rightDiv{
+	width:300px;
+	float:right;
+	background-color:#F5F2F3;
+	padding: 15px;
+}
+.common:hover{
+	background-color:#EDB2CD;
+}
+.container{
+	width:1000px;
+	margin:0 auto;
+	top:10px;
+}
+.txtArea{
+	width:270px;
+	height:100px;
+	padding:6px;
+
+}
+.btn{
+	background-color: #87ADED;
+	color:#ffffff;
+	padding:15px;
+}
+fieldset{
+	border:0;
+}
+.disableMenu {
+    display: none;
+}

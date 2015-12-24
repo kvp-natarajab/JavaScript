@@ -1,0 +1,321 @@
+if(validateName(fname,)){
+			document.getElementById('error_firstname').innerHTML="Value should not be empty";	
+		}else{
+			document.getElementById('error_firstname').innerHTML="";
+		}
+		if(lname==""){
+			document.getElementById('error_lastname').innerHTML="Value should not be empty";
+		}
+		if(password==""){
+			document.getElementById('error_password').innerHTML="Value should not be empty";
+		}
+		if(repassword==""){
+			document.getElementById('error_repassword').innerHTML="Value should not be empty";
+		}else if(password!=repassword){
+			document.getElementById('error_repassword').innerHTML="Password does not match";
+		}
+		/*====Address===*/
+		if(permanetAddr==""){
+			document.getElementById('error_permanetAddr').innerHTML="Value should not be empty";
+		}
+
+		if(document.getElementById("chkCondition").checked==false){
+			document.getElementById('error_condition').innerHTML="Please Accept Terms and conditions";
+		}
+		if(document.getElementById("slctLocation").selectedIndex==0){
+			document.getElementById('error_slctLocation').innerHTML="Please select your location";
+		}
+		if(myForm.gender[0].checked==false||myForm.gender[1].checked==false){
+			document.getElementById('error_gender').innerHTML="You must select your gender";
+			
+		}
+		return false;
+		===========
+
+		function validate_form(){
+		var a=;
+	if(a){
+		var theDropDown = document.querySelector("#dropDown");
+		theDropDown.classList.remove("disableMenu");
+	}else{
+		var theDropDown = document.querySelector("#dropDown");
+		theDropDown.classList.add("disableMenu");
+	}
+	}
+
+===========
+	
+		if(repassword=""){
+			var theValue = document.getElementById("error_repassword");
+			theValue.classList.remove("errormsg");
+		
+		}else{
+			var theValue = document.getElementById("error_repassword");
+			theValue.classList.add("errormsg");
+		
+		}
+		===============
+
+		function validate_firstname(fname){
+		var theValue = document.getElementById("error_firstname");
+		if(fname==""){
+			theValue.classList.remove("errormsg");
+			return false;
+		}else{
+			theValue.classList.add("errormsg");
+			return true;
+		}
+	}
+
+	function validate_lastname(lname){
+		var theValue = document.getElementById("error_lastname");
+		if(lname==""){
+			theValue.classList.remove("errormsg");
+			return false;
+		}else{
+			theValue.classList.add("errormsg");
+			return true;
+		}
+	}
+
+	
+
+
+	function validate_repassword(repass){
+		
+		var theValue = document.getElementById("error_repassword");
+		if(repassword==""){
+			var theValue = document.getElementById("error_repassword");
+			theValue.classList.remove("errormsg");
+			return false;
+		}else{
+			var theValue = document.getElementById("error_repassword");
+			theValue.classList.add("errormsg");
+			return true;
+		}
+	}
+	
+
+	function validate_gender(){
+		var theValue = document.getElementById("error_gender");
+		if((myForm.gender[0].checked==false)&&(myForm.gender[1].checked==false){
+			theValue.classList.remove("errormsg");
+			return false;
+		}else{
+			theValue.classList.add("errormsg");
+			return true;
+		}
+	}
+
+	===========================================
+pass=document.myForm.password.value;
+		repass=document.myForm.repassword.value;
+		permanetAddr=document.myForm.permanetAddr.value;
+===================
+
+		function validate_phone()  
+	{  
+		var input=document.myForm.phone.value;
+  		var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;  
+  		var theValue = document.getElementById("error_phone");
+  		if((input.value.match(phoneno))  
+        {  theValue.classList.remove("errormsg");
+			theValue.innerHTML="Invalid Phone Number";
+			return false;
+		}else{
+			theValue.classList.add("errormsg");
+			return true;
+		}
+	}  
+====================
+function validate_email(){
+		var email=document.myForm.email.value;
+		var theValue = document.getElementById("error_email");
+		var reg = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+		if(email==""){
+			theValue.classList.remove("errormsg");
+			theValue.innerHTML="Value should not be empty";
+			return false;
+		}else if (reg.test(email)) { 
+    		return true; 
+    	}else{
+			theValue.classList.add("errormsg");
+			theValue.innerHTML="Invalid email";
+			return false;
+		}
+	}
+
+
+=============================
+
+
+
+
+
+
+ function formValidation()  
+{  
+var uid = document.registration.userid;  
+var passid = document.registration.passid;  
+var uname = document.registration.username;  
+var uadd = document.registration.address;  
+var ucountry = document.registration.country;  
+var uzip = document.registration.zip;  
+var uemail = document.registration.email;  
+var umsex = document.registration.msex;  
+var ufsex = document.registration.fsex; 
+if(userid_validation(uid,5,12))  
+{  
+if(passid_validation(passid,7,12))  
+{  
+if(name_valid(uname))  
+{  
+if(add_valid(uadd))  
+{   
+if(country_valid(ucountry))  
+{  
+if(zip_valid(uzip))  
+{  
+if(Email_valid(uemail))  
+{  
+if(sex_valid(umsex,ufsex))  
+{  
+}  
+}   
+}  
+}   
+}  
+}  
+}  
+}  
+return false;  
+  
+} 
+
+
+
+function userid_validation(uid,mx,my)  
+{  
+var uid_len = uid.value.length;  
+if (uid_len == 0 || uid_len >= my || uid_len < mx)  
+{  
+  document.getElementById('user_id').innerHTML="Enter 5 to 12 alphabates"; 
+
+uid.focus();  
+return false;  
+}  
+else{
+  document.getElementById('user_id').innerHTML="<img src='../image/a.png'/>";  
+  return true
+}
+
+}  
+function passid_validation(passid,mx,my)  
+{  
+var passid_len = passid.value.length;  
+if (passid_len == 0 ||passid_len >= my || passid_len < mx)  
+{  
+  document.getElementById('pass_id').innerHTML="Enter 7 to 12 alphanumerics";   
+passid.focus();  
+return false;  
+}  
+else{
+  document.getElementById('pass_id').innerHTML="<img src='../image/a.png'/>";  
+  return true
+} 
+}  
+function name_valid(uname)  
+{   
+var letters = /^[A-Za-z]+$/;  
+if(uname.value.match(letters))  
+{  
+    document.getElementById('fname_id').innerHTML="<img src='../image/a.png'/>";  
+return true;  
+}  
+else  
+{  
+  document.getElementById('fname_id').innerHTML="Enter NAME";   
+uname.focus();  
+return false;  
+}  
+}  function add_valid(uadd)  
+{   
+var letters = /^[0-9a-zA-Z]+$/;  
+if(uadd.value.match(letters))  
+{  
+      document.getElementById('add_id').innerHTML="<img src='../image/a.png'/>";
+return true;  
+}  
+else  
+{  
+  document.getElementById('add_id').innerHTML="Enter Address";     
+uadd.focus();  
+return false;  
+}  
+}  
+function country_valid(ucountry)  
+{  
+if(ucountry.value == "Default")  
+{  
+  document.getElementById('count_id').innerHTML="choose country";
+ucountry.focus();  
+return false;  
+}  
+else  
+{  
+    document.getElementById('count_id').innerHTML="<img src='../image/a.png'/>";
+return true;  
+}  
+}  
+function zip_valid(uzip)  
+{   
+var numbers = /^[0-9]+$/;  
+if(uzip.value.match(numbers))  
+{  
+  document.getElementById('zip_id').innerHTML="<img src='../image/a.png'/>";  
+return true;  
+}  
+else  
+{  
+  document.getElementById('zip_id').innerHTML="Enter ZIP code";
+uzip.focus();  
+return false;  
+}  
+}  
+function Email_valid(uemail)  
+{  
+  var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;  
+if(uemail.value.match(mailformat))  
+{  
+    document.getElementById('email_id').innerHTML="<img src='../image/a.png'/>";
+return true;  
+}  
+else  
+{  
+  document.getElementById('email_id').innerHTML="enter correct email!!"; 
+uemail.focus();  
+return false;  
+}  
+} function sex_valid(umsex,ufsex)  
+{  
+x=0;  
+  
+if(umsex.checked)   
+{  
+x++;  
+} if(ufsex.checked)  
+{  
+x++;   
+}  
+if(x==0)  
+{  
+  document.getElementById('sex_id').innerHTML="select gender"; 
+umsex.focus();  
+return false;  
+}  
+else  
+{  
+alert('Form Succesfully Submitted');  
+window.location.reload()  
+return true;  
+}  
